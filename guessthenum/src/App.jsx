@@ -8,7 +8,7 @@ const NumberGuessGame = () => {
 
   const handleInputChange = (event) => {
     setGuess(event.target.value);
-    setBackgroundColor('linear-gradient(to bottom, #ff7f50, #1e90ff)');
+    // setBackgroundColor('linear-gradient(to bottom, #ff7f50, #1e90ff)');
   };
 
   const handleGuess = () => {
