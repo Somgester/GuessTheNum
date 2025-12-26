@@ -8,16 +8,15 @@ const NumberGuessGame = () => {
 
   const handleInputChange = (event) => {
     setGuess(event.target.value);
-    // setBackgroundColor('linear-gradient(to bottom, #ff7f50, #1e90ff)');
   };
 
   const handleGuess = () => {
     const userGuess = parseInt(guess);
-  
+
     if (isNaN(userGuess)) {
       setMessage('Please enter a valid number.');
     } else if (userGuess === targetNumber) {
-      setMessage(`Congratulations! You've guessed the correct number.`);
+      setMessage("Congratulations! You've guessed the correct number.");
       setBackgroundColor('green');
       setTimeout(() => setBackgroundColor('black'), 3000);
     } else {
@@ -37,12 +36,12 @@ const NumberGuessGame = () => {
       justifyContent: 'center',
       height: '100vh',
       width: '100vw',
-      backgroundColor: backgroundColor,
-      backgroundImage: `linear-gradient(to bottom, #ff7f50, #1e90ff)`,
+      backgroundColor: backgroundColor, // solid color only
       boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.2)',
-      filter: 'drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)', 
+      filter: 'drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))',
       boxSizing: 'border-box',
       overflow: 'hidden',
+      color: 'white',
     },
     input: {
       margin: '5px 0',
